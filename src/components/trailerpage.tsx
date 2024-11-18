@@ -9,7 +9,7 @@ const TrailerPage: React.FC = () => {
 
   useEffect(() => {
     const fetchTrailer = async () => {
-        const API_KEY = import.meta.env.VITE_APP_API_KEY
+        const API_KEY = 'b47db051659385374609427401504f12'
       const BASE_URL = "https://api.themoviedb.org/3";
       try {
         const response = await fetch(

@@ -1,6 +1,6 @@
 // utils/api.ts
 export const fetchMovies = async (query: string) => {
-    const apiKey = 'YOUR_TMDB_API_KEY'; // Replace with your TMDb API key
+    const apiKey = 'Yb47db051659385374609427401504f12'; 
     const baseUrl = 'https://api.themoviedb.org/3/search/movie';
   
     try {
