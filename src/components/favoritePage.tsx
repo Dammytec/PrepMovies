@@ -5,7 +5,7 @@ import Header from "../shared/headers";
 
 const FavoritesPage: React.FC = () => {
     const [favorites, setFavorites] = useState<any[]>([]);
-
+``
     useEffect(() => {
         const storedFavorites = getFavorites();
         setFavorites(storedFavorites);
