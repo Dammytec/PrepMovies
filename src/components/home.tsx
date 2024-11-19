@@ -24,7 +24,7 @@ const FetchPopularMovies: React.FC = () => {
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const API_KEY = 'b47db051659385374609427401504f12'
+      const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
       if (!API_KEY) {
         console.error("API key is not defined. Please check your .env file.");
@@ -78,17 +78,17 @@ const FetchPopularMovies: React.FC = () => {
 
         <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {/* Display first 11 movies */}
-          {movies.slice(0, 11).map((movie) => (
+          {movies.slice(0, 19).map((movie) => (
             <div
               key={movie.id}
-              className=" shadow-lg rounded-lg overflow-hidden"
+              className=" shadow-lg rounded-lg overflow-hidden relative group"
             >
               {movie.poster_path && (
                 <Link to={`/movie/${movie.id}`}>
                   <img
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     alt={movie.title}
-                    className="w-full h-52 object-cover"
+                    className="w-full h-52 object-cover border-2 border-transparent hover:border-white transition-all duration-300"
                     loading="lazy"
                   />
                 </Link>

@@ -7,7 +7,7 @@ export const addToFavorites = (movie: any) => {
 export const removeFromFavorites = (movieTitle: string) => {
   let favorites = getFavorites();
   favorites = favorites.filter((movie: any) => movie.title !== movieTitle);
-  localStorage.setItem("favorites", JSON.stringify(favorites));
+  localStorage.setItem("favorites", JSON.stringify(favorites));``
 };
 
 export const getFavorites = () => {

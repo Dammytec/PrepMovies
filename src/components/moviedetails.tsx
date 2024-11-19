@@ -55,7 +55,7 @@ const MovieDetails: React.FC = () => {
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
-        const API_KEY = 'b47db051659385374609427401504f12'
+        const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
       const BASE_URL = "https://api.themoviedb.org/3";
 
