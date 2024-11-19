@@ -24,7 +24,7 @@ const FetchPopularMovies: React.FC = () => {
 
   useEffect(() => {
     const fetchMovies = async () => {
-      const API_KEY = import.meta.env.VITEKEY;
+      const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
       if (!API_KEY) {
         console.error("API key is not defined. Please check your .env file.");
