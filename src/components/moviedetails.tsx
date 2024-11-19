@@ -55,7 +55,7 @@ const MovieDetails: React.FC = () => {
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
-        const API_KEY = import.meta.env.VITE_APP_API_KEY;
+      const API_KEY = import.meta.env.VITEKEY;
 
       const BASE_URL = "https://api.themoviedb.org/3";
 
@@ -140,7 +140,7 @@ const MovieDetails: React.FC = () => {
         {movieDetails && (
           <div className="w-[90%] m-auto">
             <div className="flex flex-col md:flex-row gap-6">
-            {  /* Movie Poster */}
+              {/* Movie Poster */}
               {movieDetails.poster_path ? (
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`}
@@ -167,7 +167,7 @@ const MovieDetails: React.FC = () => {
                 </div>
 
                 <div className="flex items-center gap-6 mb-6">
-                 { /* Buttons */}
+                  {/* Buttons */}
                   <div className="relative">
                     <button
                       onClick={handleFavoriteClick}
@@ -190,7 +190,7 @@ const MovieDetails: React.FC = () => {
                       Add to List
                     </div>
                   </div>
-                 { /* Trailer */}
+                  {/* Trailer */}
                   {movieDetails.trailer && (
                     <div className="mt-6">
                       <button
@@ -204,7 +204,7 @@ const MovieDetails: React.FC = () => {
                 </div>
               </div>
             </div>
-           {/* Movie Overview */}
+            {/* Movie Overview */}
             <div className="mt-8">
               <h3 className="text-xl font-semibold">Overview</h3>
               <p>{movieDetails.overview}</p>
@@ -227,9 +227,9 @@ const MovieDetails: React.FC = () => {
                 </div>
               ))}
             </div>
-           { /* Reviews */}
+            {/* Reviews */}
             <ReviewsSection reviews={movieDetails.reviews} />
-          {  /* Recommendations */}
+            {/* Recommendations */}
             <div className="mt-8">
               <h3 className="text-xl font-semibold">You might also like</h3>
               <div className="grid grid-cols-3 md:grid-cols-5 gap-6 mt-4">

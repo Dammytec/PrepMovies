@@ -1,6 +1,6 @@
 // utils/api.ts
 export const fetchMovies = async (query: string) => {
-    const apiKey = import.meta.env.VITE_APP_API_KEY; 
+    const apiKey = import.meta.env.VITEKEY; 
     const baseUrl = 'https://api.themoviedb.org/3/search/movie';
   
     try {

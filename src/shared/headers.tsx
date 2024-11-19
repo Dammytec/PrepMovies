@@ -74,13 +74,13 @@ const Header: React.FC = () => {
             <FaBars size={24} />
           </button>
         </div>
-      {  /* Search Icon (Mobile) */}
+        {/* Search Icon (Mobile) */}
         <div className="lg:hidden">
           <button onClick={toggleSearch} className="text-white">
             <FaSearch size={24} />
           </button>
         </div>
-       { /* Search Bar for large screen */}
+        {/* Search Bar for large screen */}
         <div className="hidden lg:flex flex-1 justify-center items-center">
           <input
             type="text"
@@ -116,7 +116,7 @@ const Header: React.FC = () => {
           </button>
         </div>
       </div>
-     { /* Mobile Menu */}
+      {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-16 left-0 w-full bg-gray-800 text-white p-4 space-y-4">
           <Link to="/" className="block hover:text-gray-400">
@@ -150,7 +150,7 @@ const Header: React.FC = () => {
           />
         </div>
       )}
-     { /* Display Search Results */}
+      {/* Display Search Results */}
       {searchResults.length > 0 && (
         <div className="bg-gray-800 text-white p-4 mt-4">
           <h3 className="text-lg font-semibold">Search Results</h3>
